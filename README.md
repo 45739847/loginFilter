@@ -1,2 +1,2 @@
 # loginFilter
-Filtro e sanitizamento de inputs para sites
+ Filtragem de dados de formulario html
