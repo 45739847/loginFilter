@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/root.css">
+    <title>Form Security</title>
+</head>
+<body>
+    
+    <div class="root">
+        <div class="form"><h2>Login</h2>
+            <form id="form" method="post" onsubmit="return validForm()" action="filterLogin.php">
+                <input type="text" name="user" id="em" placeholder="Username"><br>
+                <input type="password" name="pass" id="ps" placeholder="Senha"><br>
+                <input type="submit" value="Continuar" class="button"><br>
+                <div id="error"></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    function validForm(){
+        var formReturn = false;
+        let email = document.getElementById("em").value;
+        let pass = document.getElementById("ps").value;
+        email = email.replace(/[ÀÁÂÃÄÅ]/g,"A");
+        email = email.replace(/[àáâãäå]/g,"a");
+        email = email.replace(/[ÈÉÊË]/g,"E");
+        email = email.replace(/[^a-z0-9]/gi,'');
+        pass = pass.replace(/[ÀÁÂÃÄÅ]/g,"A");
+        pass = pass.replace(/[àáâãäå]/g,"a");
+        pass = pass.replace(/[ÈÉÊË]/g,"E");
+        pass = pass.replace(/[^a-z0-9]/gi,'')
+        if(email==false || email==null){console.log("Email >> false"); document.getElementById("error").innerHTML = '<font style="color:red;">Erro</font>'; formReturn=false; return false;}
+        if(email.length >150 || email.length <5){console.log("Email inválido"); document.getElementById("error").innerHTML = '<font style="color:red;">Erro</font>'; formReturn=false; return false;}
+        if(pass==false || pass==null){console.log("Email >> false"); document.getElementById("error").innerHTML = '<font style="color:red;">Erro</font>'; formReturn=false; return false;}
+        if(pass.length>100 || pass.length<6){console.log("senha inválida"); document.getElementById("error").innerHTML = '<font style="color:red;">Erro</font>'; formReturn=false; return false;}
+       document.getElementById("error").innerHTML = '<font style="color:rgb(32, 214, 154);">iniciando login...</font>';
+       return true;
+    }
+</script>
+
+</html>
