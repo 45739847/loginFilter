@@ -1,5 +1,5 @@
 <?php
-function limpar_string($string) {
+function limpar_string($string) { //função limpar string
     if($string !== mb_convert_encoding(mb_convert_encoding($string, 'UTF-32', 'UTF-8'), 'UTF-8', 'UTF-32'))
     $string = mb_convert_encoding($string, 'UTF-8', mb_detect_encoding($string));
     $string = htmlentities($string, ENT_NOQUOTES, 'UTF-8');
