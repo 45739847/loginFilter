@@ -6,7 +6,7 @@ Cada imput tem que ser sanitizado para impedir que codigos maliciosos sejam exec
 
 Nem um banco de dados foi incluido ainda
 
-# linguagens
+# linguagens 
 • php<br>
 • Javascript
 
