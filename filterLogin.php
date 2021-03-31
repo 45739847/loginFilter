@@ -8,7 +8,7 @@ function limpar_string($string) { //função limpar string
     $string = preg_replace(array('`[^a-z0-9]`i','`[-]+`'), ' ', $string);
     $string = preg_replace('/( ){2,}/', '$1', $string);
     return $string;
-}
+} 
 
 $username = limpar_string($_POST["user"]); //Nome da tag (name) do input html
 $senha = limpar_string($_POST["pass"]);
