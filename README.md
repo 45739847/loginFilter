@@ -5,7 +5,7 @@ Sanitização e filtro de inputs de websites<br>
 Cada imput tem que ser sanitizado para impedir que codigos maliciosos sejam executados<br>
 
 Nem um banco de dados foi incluido ainda
-
+ 
 # linguagens 
 • php<br>
 • Javascript
