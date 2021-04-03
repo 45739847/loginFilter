@@ -11,6 +11,6 @@ function limpar_string($string) { //função limpar string
 } 
 
 $username = limpar_string($_POST["user"]); //Nome da tag (name) do input html
-$senha = limpar_string($_POST["pass"]);
+$senha = limpar_string($_POST["pass"]); 
 
 ?>
