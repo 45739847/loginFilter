@@ -10,7 +10,4 @@ Nem um banco de dados foi incluido ainda
 • php<br>
 • Javascript
 
-•website html/css 
- 
- 
- 
+•website html/css
