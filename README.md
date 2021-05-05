@@ -11,8 +11,3 @@ Nem um banco de dados foi incluido ainda
 • Javascript
 
 •website html/css
-
-
-
-
-
